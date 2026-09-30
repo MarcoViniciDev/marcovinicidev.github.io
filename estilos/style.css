@@ -1,0 +1,224 @@
+@charset "UTF8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Julius+Sans+One&display=swap');
+
+@font-face {/* Isso é um regra!!! */
+    font-family: 'android';
+    src: url(../fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url(../fontes/Roboto-VariableFont_wdth\,wght.ttf);
+    font-style: normal;
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url(../fontes/Roboto-Italic-VariableFont_wdth\,wght.ttf);
+    font-style: italic;
+    font-weight: 100 900;
+}
+:root{
+    --cor0:#c5ebd6;
+    --cor1:#83e1ad;
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+    
+    
+    --font_padrao: 'roboto',Arial, Verdana, Helvetica, Sans-serif;
+    --font_destaque: 'Bebas Neue', cursive;
+    --font_robo: 'android'
+    
+}
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: var(--cor0);
+    font-family: var(--font_padrao);
+}/* 
+font-decoration:
+list-style
+list-style-position
+columns
+list-style-type:'\2714\00A0\000A0'*/
+
+.externo::after{
+content: '\1F517';
+}
+
+header{
+    background-image: linear-gradient( to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    
+}
+header > h1{
+    font-family:  var(--font_destaque);
+    color: white;
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 1px 1px 9px rgba(0, 0, 0, 0.52);
+}
+header p {
+    color: white;
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: auto;
+}
+nav{
+    background-color: var(--cor5);;
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
+}
+nav a{
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav a:link{
+    color: var(--cor1);
+} 
+nav a:visited{
+    color: var(--cor3);
+}
+nav a:hover{
+    background-color: var(--cor2);
+    color: var(--cor5);
+    border-radius: 10px;
+    transition-duration: 0.3s;
+}
+main{
+    background-color: white;
+    max-width: 1000px;
+    min-width: 300px;
+    height: 100%;
+    margin: auto;
+    box-shadow: 0px 0px 10px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+main h1 {
+    font-family: var(--font_robo);
+    color: var(--cor5);
+}
+main h2 {
+ font-family: var(--font_robo);   
+ color: var(--cor4);
+ font-size: 1.6em;
+ background-image: linear-gradient(to right, var(--cor2), transparent);
+ text-indent:5px;
+}
+main h3{
+    background-color: #1a5c37;
+    color:white;
+    padding: 10px;
+    margin: -10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+main p{
+    margin: 15px 10px;
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 1.5em;/* Aqui é o espaçamento entre  */
+    font-size: 1.1em;
+    font-style: italic;
+    font-weight: 500;
+}
+main strong{
+    font-weight: 900;
+}
+main abbr{
+    text-decoration: none;
+}
+main img{
+    width: 100%;
+} 
+main div.videos{
+background-color: var(--cor5);
+margin: 0px -20px 15px -20px;
+padding: 20px;
+position: relative;
+padding-bottom: 50%;
+}
+main div iframe{
+position: absolute;
+top: 4.002%;
+left: 9%;
+width: 82%;     
+height: 92%;
+}
+
+main #imagem_bugdroid{
+    display: block;
+    max-width: 350px;
+    margin: auto;
+   
+}
+main a, footer a{
+    text-decoration: none;
+}
+main a:link{
+    color: rgb(255, 27, 27);
+}
+main a:visited{
+     color: rgb(158, 10, 10);
+}
+main a:hover, footer a:hover{
+    text-decoration: underline;
+}
+main aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+}
+main aside ul{
+    list-style-position: inside;
+    margin: 0px 5px;
+    columns: 2;
+    list-style-type: disc;
+}
+
+footer{
+    background-image: linear-gradient(to bottom, var(--cor4),var(--cor3), var(--cor2),var(--cor1),transparent);
+    color: white;
+    text-align: center;
+    min-height: 95px;
+    padding-top: 8px;
+    border-radius: 12%;
+
+}
+footer .instagram::before{
+    content: url(../imagens/icone-instagram.png);
+    
+}
+footer p{
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+footer em{
+    font-style: italic;
+}
+footer a{
+    font-weight: 800;
+}
+footer a:link{
+    color: black;
+}
+footer a:visited{
+    color: black;
+}
+
+
+
+
